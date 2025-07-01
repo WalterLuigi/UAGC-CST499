@@ -112,5 +112,15 @@ class DatabaseHandler {
     return $classes;
     }
 
+
+    public function getData($conn) {
+        $sql = "SELECT * FROM tbluser WHERE student_id = 1";
+        $stmt = $conn->query($sql);
+        $data = $stmt->fetch_assoc();
+
+        return $data;
+
+
+    }
 }
 ?>
